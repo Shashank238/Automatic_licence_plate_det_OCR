@@ -85,7 +85,7 @@ if __name__ == '__main__':
     # host = "127.0.0.1"
     host = '127.0.0.1'
     port = 5000
-    httpd = simple_server.make_server(host, port, application)
-    print("Serving on %s %d" % (host, port))
-    httpd.serve_forever()
-    # application.run(host='0.0.0.0', port=port)
+    # httpd = simple_server.make_server(host, port, application)
+    # print("Serving on %s %d" % (host, port))
+    # httpd.serve_forever()
+    application.run(host=host, port=port)
