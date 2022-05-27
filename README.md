@@ -8,6 +8,10 @@ The dataset is obtained from webscraping google images for license plates , goog
 This project is implemented in car parking system where when user enters the parking lot it captures the licence plate number and the face of the driver to store their information.
 This can also be used by traffic controlling team and capture the number plate of the cars those break the rules.
 
+<p align="center">
+  <img width="900" height="500" src="images/demo.gif">
+</p>
+
 ## 🏁 Technology Stack
 
 * [YOLOv5](https://github.com/ultralytics/yolov5)
