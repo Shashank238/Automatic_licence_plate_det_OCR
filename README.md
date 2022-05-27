@@ -12,6 +12,14 @@ This can also be used by traffic controlling team and capture the number plate o
   <img width="900" height="500" src="images/demo.gif">
 </p>
 
+<p align="center">
+  <img width="900" height="500" src="images/output_2.png">
+</p>
+
+<p align="center">
+  <img width="900" height="500" src="images/output_1.png">
+</p>
+
 ## 🏁 Technology Stack
 
 * [YOLOv5](https://github.com/ultralytics/yolov5)
@@ -34,7 +42,7 @@ python app.py
 ```
 4. If you want to run it on camera:
 ```sh
-python detect_cam.python
+python detect_cam.py
 ```
 
 
