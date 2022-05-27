@@ -83,9 +83,9 @@ def getPrediction():
 if __name__ == '__main__':
     clApp = ClientApp()
     # host = "127.0.0.1"
-    host = '127.0.0.1'
-    port = 5000
+    # host = '127.0.0.1'
+    # port = 5000
     # httpd = simple_server.make_server(host, port, application)
     # print("Serving on %s %d" % (host, port))
     # httpd.serve_forever()
-    application.run(host=host, port=port)
+    application.run()
