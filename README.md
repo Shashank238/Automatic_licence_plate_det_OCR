@@ -23,6 +23,7 @@ This can also be used by traffic controlling team and capture the number plate o
 ## 🏁 Technology Stack
 
 * [YOLOv5](https://github.com/ultralytics/yolov5)
+* [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
 * [PyTorch](https://pytorch.org/)
 * [Flask](https://github.com/pallets/flask)
 * [Docker](https://www.docker.com/)
