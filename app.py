@@ -16,13 +16,13 @@ CORS(application)
 
 inputFileName = "inputImage.jpg"
 imagePath = "images/" + inputFileName
-croppedImagepath = "cropped_pics\licence_1.png"
-outputImagepath = "output\output_1.png"
+croppedImagepath = "cropped_pics/licence_1.png"
+outputImagepath = "output/output_1.png"
 
 class ClientApp:
     def __init__(self):
         # modelArg = "datasets/experiment_faster_rcnn/2018_08_02/exported_model/frozen_inference_graph.pb"
-        self.modelArg = "weights\licence_yv5m.pt"
+        self.modelArg = "weights/licence_yv5m.pt"
         self.device = "cpu"
         filepath = "autoPartsMapping/partNumbers.xlsx"
         # self.regPartDetailsObj = ReadPartDetails(filepath)
@@ -84,8 +84,8 @@ if __name__ == '__main__':
     clApp = ClientApp()
     # host = "127.0.0.1"
     # host = '127.0.0.1'
-    # port = 5000
+    port = 5000
     # httpd = simple_server.make_server(host, port, application)
     # print("Serving on %s %d" % (host, port))
     # httpd.serve_forever()
-    application.run()
+    application.run(host='0.0.0.0', port=port)

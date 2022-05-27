@@ -46,6 +46,32 @@ python app.py
 python detect_cam.py
 ```
 
+## Dockerize your Application
+
+<p align="center">
+  <img width="600" height="400" src="Datasets/docker2.gif">
+</p>
+
+1.Create a **Dockerfile** to create a Docker Image.
+```sh
+FROM python:3.8-buster
+COPY . /app
+EXPOSE 5000
+WORKDIR /app
+RUN apt-get update
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+CMD ["python","app.py"]
+```
+2.Build the Docker Image
+
+`docker build . -t {Name_of_your_Image}`
+
+3.Run your Docker Image
+`docker run -p 8080:5000 {Name_of_your_Image}`
+
+4.Then Open `http://localhost:8080/` in your web browser.
 
 
 
