@@ -49,7 +49,7 @@ python detect_cam.py
 ## Dockerize your Application
 
 <p align="center">
-  <img width="600" height="400" src="Datasets/docker2.gif">
+  <img width="600" height="400" src="Automatic_licence_plate_det_OCR/images/docker.gif">
 </p>
 
 1.Create a **Dockerfile** to create a Docker Image.
