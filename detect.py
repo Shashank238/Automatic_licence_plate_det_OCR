@@ -10,14 +10,14 @@ class detection:
         self.args = parse_args()
         self.image_file = self.args.image_file
         self.detect = yolov5()
+        self.pt = self.detect.load_model(self.model_path,self.device)
         self.num = ocr()
    
     def main(self):     
         img = cv2.imread(self.image_file)
         img2=img.copy()
         #detect = yolov5()
-        pt = self.detect.load_model(self.model_path,self.device)
-        frame,box1=self.detect.detection(img,pt,img2)
+        frame,box1=self.detect.detection(img,self.pt,img2)
         if len(box1) != 0:
             text = self.num.detect_ocr('cropped_pics/licence_1.png')
             print("DETECTED NUMEBER PLATE IS : ",text)
