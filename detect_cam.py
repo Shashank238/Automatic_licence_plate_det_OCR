@@ -18,7 +18,7 @@ from utils.detect_utils import load_cam , crop_img
 
 
 if __name__ == '__main__':
-    weights = 'best.pb'
+    weights = 'weights/licence_yv5m.pt'
     device = 'cpu'
     dnn = False
     data = 'data/data.yaml'

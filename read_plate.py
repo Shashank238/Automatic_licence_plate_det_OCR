@@ -19,7 +19,7 @@ class ocr:
             n=np.array(boxes[i]).astype(np.float32)
             #print(n)
             x,y,w,h = cv2.boundingRect(n)
-            if height / float(h) > 5.8: continue
+            if height / float(h) > 7.1: continue
             # ratio = h / float(w)
             # # if height to width ratio is less than 1.5 skip
             # if ratio < 0.5: continue

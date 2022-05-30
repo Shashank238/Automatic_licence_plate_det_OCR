@@ -27,6 +27,7 @@ class ClientApp:
         filepath = "autoPartsMapping/partNumbers.xlsx"
         # self.regPartDetailsObj = ReadPartDetails(filepath)
         self.numberPlateObj = yolov5()
+        self.pt = self.numberPlateObj.load_model(self.modelArg,self.device)
         self.detocr = ocr()
 
 def decodeImageIntoBase64(imgstring, fileName):
@@ -51,9 +52,8 @@ def getPrediction():
     decodeImageIntoBase64(inpImage, imagePath)
     frame = cv2.imread(imagePath)
     frame2 = frame.copy()
-    pt = clApp.numberPlateObj.load_model(clApp.modelArg,clApp.device)
     try:
-        frame,box = clApp.numberPlateObj.detection(frame,pt,frame2)
+        frame,box = clApp.numberPlateObj.detection(frame,clApp.pt,frame2)
         if len(box) != 0:
             #opencodedbase64 = encodeImageIntoBase64(croppedImagepath)
             #ig = str(encodedCroppedImageStr)
